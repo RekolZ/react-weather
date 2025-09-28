@@ -1,0 +1,144 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: rgb(169, 202, 230);
+}
+
+.loading {
+  display: block;
+}
+
+.weather__indication {
+  p {
+    margin-top: 0;
+    font-size: 70px;
+    font-weight: 800;
+  }
+  h1 {
+    position: absolute;
+    right: 50%;
+    top: 4rem;
+    transform: translate(50%, -50%);
+    margin-right: 400px;
+    font-size: 40px;
+  }
+  .city {
+    position: relative;
+    left: 57rem;
+    text-align: left;
+    width: 370px;
+    input {
+      box-sizing: border-box;
+      width: 370px;
+      font-size: 30px;
+    }
+    ul {
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      width: 100%;
+      color: rgb(0, 0, 0);
+      font-size: 16pt;
+      list-style-type: none;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      z-index: 10;
+      li {
+        cursor: pointer;
+        padding: 10px;
+        border: #727272 1px solid;
+        background-color: #fff;
+      }
+    }
+  }
+  .cloud__right-side {
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 15rem;
+    transform: translate(-50%, -50%);
+    margin-left: 250px;
+  }
+  .cloud__left-side {
+    height: 200px;
+    position: absolute;
+    right: 50%;
+    top: 23rem;
+    transform: translate(50%, -50%);
+    margin-right: 220px;
+  }
+}
+
+.weather__circle {
+  position: absolute;
+  top: 18rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.weather__img {
+  max-width: 195px;
+  margin-top: 90px;
+}
+
+.weather__periods {
+  margin-top: 110px;
+  margin: 110px auto 0px;
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 100px;
+  }
+  .weather__period-card {
+    cursor: pointer;
+    width: 200px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    div {
+      position: relative;
+      top: -23px;
+      height: 70px;
+      border-radius: 50px 50px 0px 0px;
+      background-color: rgba(0, 0, 0, 0.1);
+      h2 {
+        position: relative;
+        top: 35%;
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 50px;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.weather__hourly {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 48px;
+
+  .weather__hourly-card {
+    border: 4px solid #000;
+    border-radius: 40px;
+    background-color: rgba(126, 214, 255, 0.808);
+    width: 110px;
+    img {
+      width: 70px;
+    }
+    p {
+      font-size: 30px;
+      margin: 15px 0;
+    }
+  }
+}
