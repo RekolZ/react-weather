@@ -17,8 +17,9 @@ export default function WeatherIndication({ weather }) {
 
   const fetchCities = async (value) => {
     try {
+      const apiKey = import.meta.env.REACT_APP_WEATHER_API_KEY;
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=e8c1f053b2f0ced70c7096f12de601c3&lang=ru&country=RU`
+        `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${apiKey}&lang=ru&country=RU`
       );
       const citiesData = response.data
         .filter((city) => {
